@@ -183,7 +183,7 @@ function find(arr, searchValue) {
             pos = indx + 1
         }
     })
-    return pos
+    return pos[0]
 }
 
 /*

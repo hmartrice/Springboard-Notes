@@ -54,6 +54,8 @@ const colors = ["blue", "red", "orange", "green", "yellow"]
 //     console.log(i)
 // })
 
+
+//map
 const numbers = [1, 2, 4, 5, 7]
 const neg = numbers.map(function (num) {
     return num * -1
@@ -116,6 +118,8 @@ const repeatedStrings = myMap(["a", "b", "c", "d", "e"], function (str, idx, arr
     return str.repeat(idx)
 })
 
+
+//filter
 let letters = ["a", "b", "b", "a", "c", "d", "e", "d", "b", "a", "f", "a", "b"]
 const abs = letters.filter(function (letter) {
     return letter == "b" || letter == "a"
@@ -130,3 +134,5 @@ function myFilter(arr, callback) {
     }
     return newArr
 }
+
+//some

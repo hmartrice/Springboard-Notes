@@ -135,4 +135,65 @@ function myFilter(arr, callback) {
     return newArr
 }
 
-//some
+//some - runs a callbcak on each value in an array, if the callback returns true for at least one single value, it turns true
+
+const words = [
+    "dfgslkjhfglskjfg",
+    "sdfgkjshbdfgkjshf",
+    "sd,kfjvhgsbdkfujghbskdjfhvbskdjfhgvs",
+    "hi",
+    "let",
+    "me",
+    "dewit",
+    "foru",
+    "kermit"
+]
+
+words.some(function (word) {
+    return word.length > 20
+})
+
+words.some(function (word) {
+    return word.length == 2
+})
+
+words.some(function (word) {
+    return word.indexOf("kermit") !== -1
+})
+
+//every - returns boolean if callback is true for every element in array
+words.every(function (word) {
+    return word.length >= 2;
+})
+
+function allStrings(arr) {
+    return arr.every(function (word) {
+        return typeof word === "string"
+    })
+}
+
+function mySome(arr, callback) {
+    for (let i = 0; i < arr.length; i++) {
+        if (callback(arr[i], i, arr)) {
+            return true
+        }
+    }
+    return false
+}
+
+mySome([1, 2, 3, 4], function (n) {
+    return n === 3
+})
+
+function myEvery(arr, callback) {
+    for (let i = 0; i < arr.length; i++) {
+        if (callback(arr[i], i, arr) === false) {
+            return false
+        }
+    }
+    return true
+}
+
+myEvery([1, 1, 1, 1, 1, 1, 1], function (n) {
+    return n === 1
+})

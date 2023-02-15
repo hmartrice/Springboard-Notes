@@ -197,3 +197,57 @@ function myEvery(arr, callback) {
 myEvery([1, 1, 1, 1, 1, 1, 1], function (n) {
     return n === 1
 })
+
+//find - returns first value that matches callback function
+const scores = [
+    31,
+    25,
+    68,
+    24,
+    99,
+    76,
+    80,
+    90,
+    99,
+    83,
+    33,
+    2,
+    69,
+    69,
+    87,
+]
+
+scores.find(function (score) {
+    return score > 60
+})
+
+scores.find(function (score) {
+    return score % 2 === 0
+})
+
+scores.filter(function (score) {
+    return score > 60
+})
+
+//findIndex - returns index of first value that matches callback, does not give value at index
+scores.findIndex(function (score) {
+    return score > 60
+})
+
+function myFind(arr, callback) {
+    for (let i = 0; i < arr.length; i++) {
+        if (callback(arr[i], i, arr) === true) {
+            return arr[i]
+        }
+    }
+}
+
+function myFindIndex(arr, callback) {
+    for (let i = 0; i < arr.length; i++) {
+        if (callback(arr[i], i, arr) === true) {
+            return i
+        }
+    }
+    return -1
+}
+

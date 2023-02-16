@@ -251,3 +251,67 @@ function myFindIndex(arr, callback) {
     return -1
 }
 
+//reduce - taking some array of values and evaluating it to a single value in the end 
+const numms = [1, 2, 3, 4, 5, 6, 7, 8, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+const total = numms.reduce(function (accumulator, currentVal) {
+    //accumulator will store the value produced by the previous execution of the callback 
+    //currentVal refers to each individual element of the array
+    //when accuumulator doesnt have a starting value you can set one after the {} in this case 0
+    console.log(`Accumulator is: ${accumulator}`)
+    console.log(`CurrentVal is: ${currentVal}`)
+    let updatedSum = accumulator + currentVal
+    console.log(`Updated Sum is : ${updatedSum}`)
+    console.log("================")
+    return accumulator + currentVal
+}, 0)
+
+const total2 = numms.reduce(function (sum, num) {
+    return sum + num
+}, 0)
+
+const max = numms.reduce(function (currentHighest, num) {
+    //if no value is passed at accumulator then it starts at index 0 of the array 
+    //then currentVal will start at index 1
+    if (num > currentHighest) {
+        return num
+    }
+    return currentHighest
+})
+
+const min = numms.reduce(function (min, currentVal) {
+    //if no value is passed at accumulator then it starts at index 0 of the array 
+    //then currentVal will start at index 1
+    if (currentVal < min) {
+        return currentVal
+    }
+    return min
+})
+
+const people = [
+    { name: "Timbo", age: 26 },
+    { name: "Shawn", age: 19 },
+    { name: "Gus", age: 18 },
+    { name: "Jules", age: 21 },
+    { name: "Lassie", age: 29 },
+    { name: "Carlton", age: 26 },
+    { name: "Ohera", age: 21 },
+    { name: "Burton", age: 19 },
+    { name: "Spencer", age: 18 },
+    { name: "Henry", age: 36 },
+    { name: "Yin", age: 18 },
+    { name: "Yang", age: 18 },
+    { name: "Karen", age: 26 },
+    { name: "Vic", age: 18 },
+]
+
+const ages = people.reduce(function (peopleAges, currentPerson) {
+    const age = currentPerson.age;
+    console.log(peopleAges)
+    if (peopleAges[age] == null) {
+        peopleAges[age] = 1
+    } else {
+        peopleAges[age] += 1
+    }
+    return peopleAges
+}, {})
+

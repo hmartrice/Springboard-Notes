@@ -68,6 +68,6 @@ mySet.add("hello") // won't add the again
 
 mySet.has("hello") //boolean method
 mySet.delete("hello")
-// mySet.clear()
+mySet.clear()
 
 

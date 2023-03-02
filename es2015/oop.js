@@ -75,6 +75,7 @@ const tri = new Triangles(1, 2, 3);
 /////// Super
 //Any takes all properties of the parent class 
 //The child class can over ride the parent class methods i.e. display
+//super() by itself calls the constructor of the parent 
 
 class RightTriangles extends Triangles {
     constructor(a, b, c) {

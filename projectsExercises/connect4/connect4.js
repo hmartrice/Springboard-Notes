@@ -1,4 +1,3 @@
-
 class Game {
     constructor(p1, p2) {
         this.WIDTH = 7;

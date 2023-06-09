@@ -85,24 +85,29 @@ $('.class').prepend("<input type='checkbox' />")
 $('.class').prepend("<input type='checkbox' />")
 $("<h1>Append Example</h1>").css("color", "blue").appendTo(".classes")
 
-$(".class").remove()
 
 //////////////////////////
-// Event and delegation 
+// Event and delegation / Animation
 $("img").click(function () {
-    alert("hi")
-    $(this).fadeOut(3000, function () {
+    // alert("hi")
+    // $(this).fadeOut(3000, function () {
+    //     $(this).remove();
+    // });
+    $(this).animate({
+        opacity: 0,
+        width: "50px" //Do not animate width (poor performance)
+    }, 1500, function () {
         $(this).remove();
-    });
+    })
 })
-//jquerys on() works like addEventListener
+//jquerys on() works like addEventList ner
 //click() and on("click") are very similar but the former is a 
 //shorthand for the latter
 //on() accepts optional argument between type of event and callback
+
 $(".class").on("click", function () {
-    alert("Hey you clicked me")
+    alert("Hey you clicked me");
+    $(this).remove();
 })
-$(".classes").on("mouseleave", function () {
-    console.log("Mouse left")
-})
+
 

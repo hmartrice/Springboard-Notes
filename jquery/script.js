@@ -85,7 +85,6 @@ $('.class').prepend("<input type='checkbox' />")
 $('.class').prepend("<input type='checkbox' />")
 $("<h1>Append Example</h1>").css("color", "blue").appendTo(".classes")
 
-
 //////////////////////////
 // Event and delegation / Animation
 $("img").click(function () {

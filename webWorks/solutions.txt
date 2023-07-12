@@ -1,0 +1,24 @@
+What is HTTP 
+- Hyper Text Transfer Protocol - it controls how clients get/send data from a server.
+WHat is a URL
+- Uniform Resource Locator - an address for something online
+What is DNS
+- Domain Name System - it takes human readable URLs and converts them into IP addresses
+What is a query string
+- Allows you to use key-value pairs in URLs 
+What are two HTTP verbs and how are they different
+- GET - gets some data from a server
+- POST - sends some data to the server
+What is an HTTP requests
+- Is a HTTP request from a client to a server
+What is an HTTP response
+- A HTTP response from a server
+What is an HTTP header
+- Headers provide info about the request/response 
+What are the processes that happen when you type into a Browsers
+- Client inputs a human readable URL into a Browsers
+- The browser uses DNS to take that URL and turn it into a IP address
+- The browser makes a request to that IP address
+- The servers sends a response
+- The browser takes that response and creates a DOM
+- The browser makes any additional HTTP requests for resources from the DOM
